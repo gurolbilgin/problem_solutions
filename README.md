@@ -1,2 +1,3 @@
-# fibonacci
-calculating fibonacci more than one programming language
+# problem solutions
+
+Solving problems using multiple programming languages
