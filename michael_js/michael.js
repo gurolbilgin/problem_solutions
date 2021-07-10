@@ -43,15 +43,17 @@
 
 // while (correctEntry) {
 //     var input = window.prompt("Enter your date using DD/MM/YYYY, DD.MM.YYYY or DD MM YYYY format to organize: ")
-//     console.log(input);
-//     if (input.length == 10);
+
+//     if (input.length == 10){
 //     correctEntry = false;
-       
+//     }     
 // }
 
 // let output  = function (inpt) {
 //     let char = /[ ./]/g;
+//     console.log(inpt);
 //     inpt = inpt.replace(char, " ").split(' ');
+//     console.log(inpt);
 //     inpt = [inpt[2], inpt[1], inpt[0]].join('-');
 //     return inpt;
 // }
@@ -67,14 +69,26 @@
 // let entry = true;
 
 // while (entry) {
-//     const number = prompt("Please enter a number between 0 and 100: ");
-    
-//     if ( (Number(number)) &&  1 <= number.length <= 3 ) 
+//     let number = prompt("Please enter a number between 0 and 100: ");
+//     if (Number(number) && 0 < number && number <= 100 ) 
 //     entry = false;
-//     console.log(number);
-
-
+    
+    
 // }
+
+// console.log("You have entered a number within the range");
+
+// // ----------- Sofia's version
+// while (true){
+//     let input = prompt("Please enter a number between 0 and 100")
+//     if(Number(input) && num > 0 && num <= 100){
+//         console.log('It is a valid number');
+//         break;
+//     }else{
+//         console.log('Please enter valid number');
+//     }
+// }
+
 
 // there are two other methods to convert strings to numbers:
 // parseInt(string, 10) ==> second parametre is radix which is base 10 in our condition
@@ -85,7 +99,7 @@
 
 // ---------------------
 
-//-------------------- Michael Question 3 
+// //-------------------- Michael Question 3 
 // Create an application which selects a name randomly from a list. Then we can use it whenever we need
 
 const starWarsCharachterList = ["Darth", "Kenobi", "Sith", "Mandalorian", "C-3PO", "Anakin", "Han", "Yoda"];
