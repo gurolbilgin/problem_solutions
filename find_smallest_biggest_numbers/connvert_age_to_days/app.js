@@ -26,14 +26,14 @@
 // let numLi= [1,5,5,6,8,9];
 // let result = [];
 
-// function minMax () {
-//     numLi = numLi.sort((a,b) => (a - b));
-//     console.log(numLi);
-//     result = Array(numLi[0], numLi[numLi.length-1]);
-//     return result;
-// }
+function minMax () {
+    numLi = numLi.sort((a,b) => (a - b));
+    console.log(numLi);
+    result = Array(numLi[0], numLi[numLi.length-1]);
+    return result;
+}
 
-// console.log(minMax());
+console.log(minMax());
 
 
 
