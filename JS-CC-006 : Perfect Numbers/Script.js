@@ -1,6 +1,6 @@
 function perfectNumber(num) {
   const numbers = [];
-  const dividableNumbers = [];
+  const divisableNumbers = [];
   
   const perfect = num + " is a perfect number!"
   const notPerfect = num + " is NOT a perfect number!"
@@ -11,17 +11,17 @@ function perfectNumber(num) {
   }
 
   numbers.forEach( (number) => {
-    if (num % number == 0) dividableNumbers.push(number)
+    if (num % number == 0) divisableNumbers.push(number)
    })
 
-   const total = dividableNumbers.reduce((a, b) => a + b); 
+  const total = divisableNumbers.reduce((a, b) => a + b); 
 
   //  console.log(numbers);
   //  console.log(total);
 
   const result = num == total ?  perfect : notPerfect
 
-  document.write('result')
+  document.write(result + '<br><br>')
   console.log(result);
 
 }
