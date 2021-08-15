@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // Find the Smallest and Biggest Numbers
+
+    // Create a function that takes an array of numbers and return both the minimum and maximum numbers, in that order.
+    // minMax([1, 2, 3, 4, 5]) ➞ [1, 5]
+
+    // minMax([2334454, 5]) ➞ [5, 2334454]
+
+    // minMax([1]) ➞ [1, 1]
+
+    // const myArray = [1, 2, 3, 5]
+
+    // const myArray3 = [1]
+   
+    
+
+
+    // function checkMinMax (a) {
+    //   const max = Math.max(...a)
+    //   const min = Math.min(...a)
+    //   const result = [min, max]
+    //   // console.log(max);
+    //   // console.log(min);
+
+    //   console.log(result);
+    // }
+
+
+function checkMinMax(numbers) {
+  const num = numbers
+
+  num.sort((a, b) => a - b);
+  const result = [num[0], num[num.length - 1]] 
+  
+  console.log(result);
+};
+
+
+    
+
+    checkMinMax([1, 2, 3, 5])
+    checkMinMax([3241, 2, 3, 5])
+    checkMinMax([1, 3432, 3, 5])
+    checkMinMax([1])
+    checkMinMax([1, -2, 3, 5])
+    checkMinMax([21, 342, 3, 534])
+    checkMinMax([])
+
+  </script>
+</body>
+</html>

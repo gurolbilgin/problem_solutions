@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // Create a function which returns the number of true values there are in an array.
+   
+   
+    // Return 0 if given an empty array.
+    // All array items are of the type bool (true or false).
+
+// - - - - -- method 1 with map and using a single line 
+
+  function countTrue(elements) {
+    let trueCount = 0;
+    elements.map( (e) =>  e === true ? trueCount++ : trueCount  )
+    return trueCount;
+  }  
+
+
+// // // - - - - - - method 2 with map 
+//   function countTrue(elements) {
+//     const myArray = elements;
+//     let trueCount = 0
+//     function trueFinder(e) {
+//       e === true ? trueCount++ : trueCount}
+
+//     myArray.map( trueFinder ) 
+//     //   if (e) {
+//     //     trueCount++
+//     //   }
+//     // })
+//     return trueCount;
+//   }  
+
+
+  // - - - - - - - for loop
+
+  // function countTrue(elements) {
+  //   const myArray = elements;
+  //   let trueCount = 0
+
+  //   for (i = 0; i < myArray.length; i++) {
+  //     myArray[i] ? trueCount++ : trueCount
+  //   }
+  //   return trueCount;
+  // }  
+
+
+  console.log(countTrue([true, true, true, true, 0]) ); 
+  console.log(countTrue([true, true, false, false]))
+  console.log(countTrue([false]))
+
+  </script>
+</body>
+</html>
