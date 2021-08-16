@@ -20,9 +20,18 @@
     // const myArray = [1, 2, 3, 5]
 
     // const myArray3 = [1]
-   
-    
+  
+// // method 0 using concat() method
 
+// function checkMinMax (a) {
+//       const max = [Math.max(...a)]
+//       const min = [Math.min(...a)]
+    
+//       console.log(min.concat(max));
+//     }
+
+
+// method 1 using Math.min() and Math.max()
 
     // function checkMinMax (a) {
     //   const max = Math.max(...a)
@@ -34,20 +43,19 @@
     //   console.log(result);
     // }
 
-
-function checkMinMax(numbers) {
-  const num = numbers
-
-  num.sort((a, b) => a - b);
-  const result = [num[0], num[num.length - 1]] 
-  
-  console.log(result);
-};
+// method 2 using sort() a-b
 
 
-    
+// function checkMinMax(numbers) {
+//   const num = numbers
 
-    checkMinMax([1, 2, 3, 5])
+//   num.sort((a, b) => a - b);
+//   const result = [num[0], num[num.length - 1]] 
+
+//   console.log(result);
+// };
+
+console.log(checkMinMax([1, 2, 3, 5])); 
     checkMinMax([3241, 2, 3, 5])
     checkMinMax([1, 3432, 3, 5])
     checkMinMax([1])

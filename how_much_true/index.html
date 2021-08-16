@@ -16,11 +16,11 @@
 
 // - - - - -- method 1 with map and using a single line 
 
-  function countTrue(elements) {
-    let trueCount = 0;
-    elements.map( (e) =>  e === true ? trueCount++ : trueCount  )
-    return trueCount;
-  }  
+  // function countTrue(elements) {
+  //   let trueCount = 0;
+  //   elements.map( (e) =>  e === true ? trueCount++ : trueCount  )
+  //   return trueCount;
+  // }  
 
 
 // // // - - - - - - method 2 with map 
@@ -51,6 +51,14 @@
   //   return trueCount;
   // }  
 
+
+  // - - - - - - forEach solution
+
+  function countTrue(elements) {
+    let trueCount = 0;
+    elements.map( (e) =>  e === true ? trueCount++ : trueCount  )
+    return trueCount;
+  }  
 
   console.log(countTrue([true, true, true, true, 0]) ); 
   console.log(countTrue([true, true, false, false]))
