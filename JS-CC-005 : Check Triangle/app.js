@@ -7,10 +7,10 @@ const result = document.querySelector('#result');
 // const laneA = document.querySelector('#lane-1');
 // const laneB = document.querySelector('#lane-2');
 // const laneC = document.querySelector('#lane-3');
-
 const laneA = 3
-const laneB = 4
-const laneC = 5
+const laneB = 3
+const laneC = 3
+
 
 // console.log(form);
 
@@ -22,7 +22,8 @@ class Triangle {
   }
 
   isValid() {
-    return  (laneA, laneB, laneC) > 0 && (laneA + laneB >= laneC) || (laneC + laneB >= laneA) || (laneA + laneC >= 0) ? true : false
+    return  (laneA || laneB || laneC == 0) || (laneA, laneB, laneC) > 0 && (laneA + laneB <= laneC) || (laneC + laneB <= laneA) || (laneA + laneC <= 0) ? false : true
+    
   }
 
   calcTriangle() {
@@ -32,7 +33,7 @@ class Triangle {
   }
 } 
 
-let triangleType = new Triangle(laneA, laneB, laneC)
+let triangleType = new Triangle(laneA, laneB, laneC.value)
 
 
 
@@ -40,14 +41,16 @@ let triangleType = new Triangle(laneA, laneB, laneC)
 // form.addEventListener('input', () => {
 // console.log(laneA.value);})
 button.addEventListener('click', () => {
-  console.log(laneA);
-  console.log(laneB);
-  console.log(laneC);
+  // console.log(laneA.value);
+  // console.log(laneB.value);
+  // console.log(laneC.value);
+  console.log(triangleType);
+  console.log(laneA.value);
 
-  myfunc(laneA, laneB, laneC)  }
+  myfunc(triangleType)  }
 );
 
-function myfunc(laneA, laneB, laneC) {
+function myfunc() {
     if (triangleType.isValid()) {
     triangleType.calcTriangle();
     } else {

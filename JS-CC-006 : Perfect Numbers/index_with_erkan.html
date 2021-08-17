@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const number = prompt("Enter your number and it is a perfect one?: ")
+
+    const isItPerfect = (num) => {
+      const divisableNumbers = []
+      for (i = num - 1; i > 0; i--) {
+        num % i == 0 ? divisableNumbers.push(i) : null
+      }
+      const total = divisableNumbers.reduce( (a, b) => a + b)
+      const result = total == num ? `${num} is a perfect number` : `${num} is NOT a perfect number`
+      return result
+    }
+
+    console.log(isItPerfect(number));
+  </script>
+</body>
+</html>
