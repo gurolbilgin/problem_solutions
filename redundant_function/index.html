@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // A Redundant Function
+    // Write a function redundant that takes in a string str and returns a function that returns str.
+
+    // Examples
+    // const f1 = redundant("apple")
+    // f1() ➞ "apple"
+
+    // const f2 = redundant("pear")
+    // f2() ➞ "pear"
+
+    // const f3 = redundant("")
+    // f3() ➞ ""
+
+
+    function redundant(str) {
+      function f1(str){
+        return str
+      }  
+      return f1(str)    
+    }
+
+    console.log(redundant("apple"))
+    console.log(redundant(""))
+    console.log(redundant("hiyar"))
+
+
+  </script>
+</body>
+</html>
