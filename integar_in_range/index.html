@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // Integer in Range?
+    // Create a function that validates whether a number n is within the bounds of lower and upper. Return false if n is not an integer.
+
+    // Examples
+    // intWithinBounds(3, 1, 9) ➞ true
+
+    // intWithinBounds(6, 1, 6) ➞ false
+
+    // intWithinBounds(4.5, 3, 8) ➞ false
+    // Notes
+    // The term "within bounds" means a number is considered equal or greater than a lower bound and lesser (but not equal) to an upper bound, (see example #2).
+    // Bounds will be always given as integers.
+
+// -------------- method 1 
+
+    // function intWithinBounds(a, b, c) {
+    //   const firstCondition = String(a).split("").includes(".") ? false : true
+    //   return (a >= b && a < c && firstCondition) ? true : false;
+    // }
+
+// ------------------ method2 ternary else if usage *******
+
+    function intWithinBounds(a, b, c) {
+      return String(a).split("").includes(".") ? false 
+      : a >= b && a < c  ? true 
+      : false;
+    }
+
+    console.log(intWithinBounds(3, 1, 9) ); 
+    console.log(intWithinBounds(6, 1, 6) ); 
+    console.log(intWithinBounds(4.5, 3, 8)); 
+    console.log(intWithinBounds(1.5, 1, 3)); 
+    console.log(intWithinBounds(2, 1, 3)); 
+
+// --------------method 3 
+
+
+function intrange (){
+        let a = Number(prompt("Sayıyı giriniz"));
+        let b = Number(prompt("Sayının alt sınırını giriniz"))
+        let c = Number(prompt("Sayının üst sınırını giriniz"))
+        
+             if (String(a).split("").includes(".")){
+                return "Lütfen tam sayı giriniz"
+             }
+             else if (a >= b && a < c){
+                 return "Sayı girdiğiniz sınırlar içerisinde"
+             }
+             else{
+                return "Sayı girdiğini sınırlar içerisinde değil"
+             }                   
+        }
+        console.log(intrange())
+
+
+    // intWithinBounds(3, 1, 9) ➞ true
+
+    // intWithinBounds(6, 1, 6) ➞ false
+
+    // intWithinBounds(4.5, 3, 8) ➞ false
+    
+
+  </script>
+</body>
+</html>
