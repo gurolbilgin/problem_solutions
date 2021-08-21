@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // Burglary Series (04): Add its Name
+    // Given three arguments ⁠— an object obj of the stolen items, the pets name and a value ⁠— return an object with that name and value in it (as key-value pairs).
+
+    // Examples
+    // addName({}, "Brutus", 300) ➞ { Brutus: 300 }
+
+    // addName({ piano: 500 }, "Brutus", 400) ➞ { piano: 500, Brutus: 400 }
+
+    // addName({ piano: 500, stereo: 300 }, "Caligula", 440) ➞ { piano: 500, stereo: 300, Caligula: 440 }
+    let burglaryObj = {};
+
+    const addObjectName = (burglaryObj, key, value) => {
+      burglaryObj[key] = value 
+      return burglaryObj
+    }
+
+    console.log(addObjectName({}, "Brutus", 300))
+    console.log(addObjectName({ piano: 500 }, "Brutus", 400))
+    console.log(addObjectName({ piano: 500, stereo: 300 }, "Caligula", 440))
+
+  </script>
+</body>
+</html>
