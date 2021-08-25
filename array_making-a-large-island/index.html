@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // You are given an n x n binary matrix grid. You are allowed to change at most one 0 to be 1.
+
+    // Return the size of the largest island in grid after applying this operation.
+
+    // An island is a 4-directionally connected group of 1s.
+
+    // Example 1:
+
+    // Input: grid = [[1,0],[0,1]]
+    // Output: 3
+    // Explanation: Change one 0 to 1 and connect two 1s, then we get an island with area = 3.
+    // Example 2:
+
+    // Input: grid = [[1,1],[1,0]]
+    // Output: 4
+    // Explanation: Change the 0 to 1 and make the island bigger, only one island with area = 4.
+    // Example 3:
+
+    // Input: grid = [[1,1],[1,1]]
+    // Output: 4
+    // Explanation: Can't change any 0 to 1, only one island with area = 4.
+    
+
+    // Constraints:
+
+    // n == grid.length
+    // n == grid[i].length
+    // 1 <= n <= 500
+    // grid[i][j] is either 0 or 1.
+
+    const areaCalculator = (inputGrid) => {
+      const halfInput1 = (inputGrid.slice(0,1));
+      const halfInput2 = (inputGrid.slice(-1));
+      // if (halfInput1.includes(2)) return false
+      console.log( halfInput1);
+      console.log( halfInput2);
+      console.log( halfInput1.prototype.includes(1));
+      console.log( halfInput2.includes(1));
+      console.log( inputGrid.includes([1,0]));
+      console.log( [2].includes(2));
+      console.log(typeof(halfInput1));
+
+
+      // console.log(halfInput2);
+      // const quarterInput
+      
+      // const lineA = halfInput[0][0];
+      // const lineB = halfInput[0][1];
+      // const lineC = halfInput[1][0];
+      // const lineD = halfInput[1][1];
+      
+       
+    }
+
+   console.log(areaCalculator([[1,0],[0,1]]));  
+  </script>
+</body>
+</html>
