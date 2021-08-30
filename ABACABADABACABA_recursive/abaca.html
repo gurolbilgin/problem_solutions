@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+//     ABACABADABACABA
+// Create a function that follows the "ABACABADABACABA" rule up to a certain letter.
+
+// The abacabadabacaba pattern is where you start with the first letter (a), and with each new letter, you add the letter in the middle and the others at the start and end.
+
+// For instance:
+
+// A ➞ **A**
+// B ➞ A**B**A
+// C ➞ ABA**C**ABA
+// D ➞ ABACABA**D**ABACABA
+// E ➞ ABACABADABACABA**E**ABACABADABACABA
+// F ➞ ABACABADABACABAEABACABADABACABA**F**ABACABADABACABAEABACABADABACABA
+
+// # And so on ...
+// Examples
+// ABA("A") ➞ "A"
+
+// ABA("B") ➞ "ABA"
+
+// ABA("E") ➞ "ABACABADABACABAEABACABADABACABA"
+// Notes
+// N/A
+  const alphabets = ["A", "B", "C", "D", "E", "F", "G"];
+
+    const aba = (letter) => {
+      
+      const index = alphabets.indexOf(letter)
+      let firstLetter = "A";
+      let secondLetter = "ABA";
+      console.log({letter});
+      console.log({index});
+      console.log({alphabets});
+
+      return function recursive(index) {
+        // if (index > 0 ) return alphabets
+        console.log(alphabets);
+        
+      }  
+    }
+    console.log(aba("B"));
+    
+    
+
+  </script>
+</body>
+</html>
