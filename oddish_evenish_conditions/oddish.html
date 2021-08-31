@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+//     Oddish vs. Evenish
+// Create a function that determines whether a number is Oddish or Evenish. A number is Oddish if the sum of all of its digits is odd, and a number is Evenish if the sum of all of its digits is even. If a number is Oddish, return "Oddish". Otherwise, return "Evenish".
+
+// For example, oddishOrEvenish(121) should return "Evenish", since 1 + 2 + 1 = 4. oddishOrEvenish(41) should return "Oddish", since 4 + 1 = 5.
+
+// Examples
+// oddishOrEvenish(43) ➞ "Oddish"
+// // 4 + 3 = 7
+// // 7 % 2 = 1
+
+// oddishOrEvenish(373) ➞ "Oddish"
+// // 3 + 7 + 3 = 13
+// // 13 % 2 = 1
+
+// oddishOrEvenish(4433) ➞ "Evenish"
+// // 4 + 4 + 3 + 3 = 14
+// // 14 % 2 = 0
+
+// // method 1 using strings
+
+
+// function oddishOrEvenish(num) {
+//   let numStr = num.toString(); 
+
+//   let total = 0;
+//   let index = 0;
+//   while (index < numStr.length) {
+//     total += Number(numStr[index])
+//     index++
+//   }
+//   total = String(total)
+//   console.log(total);
+//   return total[total.length-1] % 2 == 0 ? "Evenish" : "Oddish";
+
+// }
+
+// console.log(oddishOrEvenish(44));
+// console.log(oddishOrEvenish(72));
+// console.log(oddishOrEvenish(4433));
+
+// method 2 ------- using arrays
+
+function oddishOrEvenish(num) {
+  let arr = String(num).split("").map(x => Number(x)).reduce((a,b) => a + b);
+  return arr % 2 == 0 ? "Evenish" : "Oddish";
+}
+
+console.log(oddishOrEvenish(44));
+console.log(oddishOrEvenish(72));
+console.log(oddishOrEvenish(4433));
+
+
+
+
+
+// //-------- method erkan
+
+// let oddishOrEvenish = (number) =>{
+//     let snumber =  String(number).split("")
+//     console.log(snumber);
+//     let toplam = 0
+//         for (let index = 0; index < snumber.length; index++) {
+//         let element = Number(snumber[index]);
+//         console.log(element);
+//         toplam += element
+//     }
+//     console.log(toplam);
+//     return toplam % 2 == 1 ? "oddish" : "evenish";
+// }
+// console.log(oddishOrEvenish(9999999));
+
+  </script>
+</body>
+</html>
