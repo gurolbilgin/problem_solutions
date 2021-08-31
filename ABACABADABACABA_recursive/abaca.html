@@ -32,27 +32,47 @@
 // ABA("E") ➞ "ABACABADABACABAEABACABADABACABA"
 // Notes
 // N/A
-  const alphabets = ["A", "B", "C", "D", "E", "F", "G"];
+
+// method 1  followed stepping  but could not resolve 
+
+  const alphabet = ["A", "B", "C", "D", "E", "F", "G"];
+
 
     const aba = (letter) => {
-      
-      const index = alphabets.indexOf(letter)
-      let firstLetter = "A";
-      let secondLetter = "ABA";
-      console.log({letter});
-      console.log({index});
-      console.log({alphabets});
 
-      return function recursive(index) {
-        // if (index > 0 ) return alphabets
-        console.log(alphabets);
-        
-      }  
-    }
+      let index = alphabet.indexOf(letter)
+      let n =  index + 1
+  
+      function rec(n) {
+        if (n <= 0) {
+          return "";
+        } 
+        let prev = rec(n-1)
+        return rec(n-1) + letter + rec(n-1); 
+      }
+      rec(n)
+    }  
+    
+    console.log(aba("A"));
     console.log(aba("B"));
-    
-    
+    console.log(aba("C"));
+    console.log(aba("D"));
 
+    // method 2 erkan-------------
+
+
+   let list = ["A", "B", "C", "D", "E"]
+
+
+ function bar(i){
+    let resultindex = list.indexOf(i);
+     if (resultindex < 0){
+         return "";
+     }
+        let result = bar(list[resultindex-1])
+        return result + i + result;
+}
+console.log(bar("E"));
   </script>
 </body>
 </html>
