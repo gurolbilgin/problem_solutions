@@ -26,11 +26,12 @@ function trackRobot(...steps) {
   if (arr[0] == null) {
     return [0, 0];
   } else {
+    arr.length % 2 == 1 ? arr.push(0) : null;
+    // console.log(arr)
     let ix = 1;
     let iy = 0;
 
     let y = arr.reduce((a, b) => {
-      console.log(a, b);
       return arr[iy] - arr[iy + 2];
     });
 
@@ -42,6 +43,6 @@ function trackRobot(...steps) {
   }
 }
 
-// console.log(trackRobot(20, 30, 10, 40));
+console.log(trackRobot(20, 30, 10, 40));
 console.log(trackRobot(-10, 20, 10));
-// console.log(trackRobot());
+console.log(trackRobot());
