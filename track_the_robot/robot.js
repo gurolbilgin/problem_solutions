@@ -22,19 +22,26 @@
 
 function trackRobot(...steps) {
   let arr = [...steps];
-  let idx = 0;
 
-  let y = arr.reduce((a, b) => {
-    return arr[idx] - arr[idx + 2];
-  });
+  if (arr[0] == null) {
+    return [0, 0];
+  } else {
+    let ix = 1;
+    let iy = 0;
 
-  let x = arr.reduce((a, b) => {
-    return arr[idx + 1] - arr[idx + 3];
-  });
+    let y = arr.reduce((a, b) => {
+      console.log(a, b);
+      return arr[iy] - arr[iy + 2];
+    });
 
-  return [x, y];
+    let x = arr.reduce((a, b) => {
+      return arr[ix] - arr[ix + 2];
+    });
+
+    return [x, y];
+  }
 }
 
-console.log(trackRobot(20, 30, 10, 40));
+// console.log(trackRobot(20, 30, 10, 40));
 console.log(trackRobot(-10, 20, 10));
-console.log(trackRobot());
+// console.log(trackRobot());
