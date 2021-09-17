@@ -31,13 +31,19 @@ const lengthOfLongestSubstring = (s) => {
   let arr = [...s];
   let stock = [];
   let subArr = [];
+  let result = [...blankCount+1*',']
   arr.map((e) => {
     stock.indexOf(e) === -1 ? stock.push(e) : stock.push("") && stock.push(e);
+    console.log(stock);
   });
-  console.log(stock);
-  console.log(stock.indexOf(""));
-  stock.map((e) => (e !== "" ? [subArr.push(e)] : null));
+
+  // console.log(stock);
+  // console.log(stock.indexOf(""));
+  let blankCount = 0;
+  stock.map((e) => (e !== "" ? null : blankCount++));
+  [...blankCount+1*','] = subArr
   console.log("subArr", subArr);
+  console.log(blankCount);
 
   //   console.log(stock.length);
   //   console.log(stock.filter((e) => e == "").length);
