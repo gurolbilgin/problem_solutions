@@ -31,7 +31,8 @@ const lengthOfLongestSubstring = (s) => {
   let arr = [...s];
   let stock = [];
   let subArr = [];
-  let result = [...blankCount+1*',']
+  let blankCount = 0;
+
   arr.map((e) => {
     stock.indexOf(e) === -1 ? stock.push(e) : stock.push("") && stock.push(e);
     console.log(stock);
@@ -39,9 +40,14 @@ const lengthOfLongestSubstring = (s) => {
 
   // console.log(stock);
   // console.log(stock.indexOf(""));
-  let blankCount = 0;
+
   stock.map((e) => (e !== "" ? null : blankCount++));
-  [...blankCount+1*','] = subArr
+  stock.map((e) => (e !== "" {
+    if (subArr.length === 0)  subArr = stock.splice(0, stock.indexOf(e) + 1)
+     
+  }
+  ));
+
   console.log("subArr", subArr);
   console.log(blankCount);
 
