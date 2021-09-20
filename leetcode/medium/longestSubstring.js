@@ -28,27 +28,6 @@
 // s consists of English letters, digits, symbols and spaces.
 
 const lengthOfLongestSubstring = (s) => {
-  let arr = [...s];
-  // let stock = [];
-  // let subArr = [];
-  // let blankCount = 0;
-
-  // arr.map((e) => {
-  //   stock.indexOf(e) === -1 ? stock.push(e) : stock.push("") && stock.push(e);
-  //   console.log(stock);
-  // });
-
-  // // console.log(stock);
-  // // console.log(stock.indexOf(""));
-
-  // stock.map((e) => (e !== "" ? null : blankCount++));
-  // stock.map((e) => {
-  //   if (e !== "") {
-  //     subArr = subArr.splice(0, subArr.length);
-  //     subArr.push(e);
-  //     console.log("subArr", subArr);
-  //   }
-  // });
   let count = 0;
 
   let begining = 0;
@@ -57,25 +36,19 @@ const lengthOfLongestSubstring = (s) => {
 
   while (begining < s.length && ending < s.length) {
     let char = s.charAt(ending);
-    console.log(char);
+    // console.log("char", char);
     if (!set.has(char)) {
       set.add(char);
       ending++;
       count = Math.max(count, ending - begining);
+      // console.log("set", set);
+      // console.log("count", count);
+    } else {
+      set.delete(s.charAt(begining));
+      begining++;
     }
-    // else {
-    //   set.delete(s.charAt(begining))
-    // }
   }
-  console.log(count);
-  console.log(set);
-
-  // console.log("subArr", subArr);
-  // console.log(blankCount);
-
-  //   console.log(stock.length);
-  //   console.log(stock.filter((e) => e == "").length);
-  //   console.log(stock.filter((e) => e == ""));
+  return count;
 };
 
 console.log(lengthOfLongestSubstring("abcabcbb"));
