@@ -13,22 +13,19 @@
 
 function ingExtractor(s) {
   s = s.split(" ");
-  console.log(s);
-  let regFilterING = /ing\b/gi;
-  let regFilterVowels = new RegExp(/\w*[aeiou]\w*[aeiou]\w*/gi);
+
+  let regFilterING = /(ing)\b/gi;
+  let regFilterVowels = /\w*[aeiou]\w*[aeiou]\w*/gi;
   let result = [];
 
   s.map((e) => {
-    console.log("e1", e);
-    if (regFilterING.test(e)) {
+    if (e.match(regFilterING) && e.match(regFilterVowels)) {
       // return (result = [...result, e]);
       console.log("e2", e);
-      // result.push(e);
-
-      // return result;
+      result.push(e);
     }
   });
-  // console.log(result);
+  return result;
 }
 
 console.log(ingExtractor("coming bringing Letting sing")); // ["coming", "bringing", "Letting"]
